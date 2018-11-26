@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="colorPrimary">#4a76a8</color>
+	<color name="colorPrimaryDark">#224b7a</color>
+	<color name="colorAccent">#f66261</color>
+
+	<color name="app_bg_gradient_top">#f7f9fa</color>
+	<color name="app_bg_gradient_bottom">#ebedf0</color>
+
+	<color name="bottom_bg_gradient_top">#00ebedf0</color>
+	<color name="bottom_bg_gradient_bottom">#ffebedf0</color>
+
+	<color name="post_sender_name_text">#2c2d2e</color>
+	<color name="post_time_text">#818c99</color>
+	<color name="post_text">#2a2d31</color>
+	<color name="post_text_more">#99a2ad</color>
+
+	<color name="post_badge_text_color">@android:color/white</color>
+
+	<color name="post_photo_bg">#d1d7de</color>
+	<color name="post_photo_indicator_selected">#ffffffff</color>
+	<color name="post_photo_indicator_unselected">#3fffffff</color>
+
+	<color name="feed_fab_color">@android:color/white</color>
+
+	<color name="login_screen_statusbar">#3b5f87</color>
+	<color name="login_screen_bg">#5181b8</color>
+	<color name="login_button_bg">#6696cc</color>
+
+	<color name="error_text_color">#aaa</color>
+
+</resources>

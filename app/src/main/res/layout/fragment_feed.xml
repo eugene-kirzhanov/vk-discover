@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:clipChildren="false"
+	android:clipToPadding="false"
+	tools:context=".features.feed.FeedActivity">
+
+	<androidx.constraintlayout.widget.Group
+		android:id="@+id/groupError"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		app:constraint_referenced_ids="textError,buttonRetry" />
+
+	<androidx.constraintlayout.widget.Group
+		android:id="@+id/groupContent"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="visible"
+		app:constraint_referenced_ids="lockableScrollView,bottomShadow,buttonSkip,buttonLike" />
+
+	<androidx.constraintlayout.widget.Group
+		android:id="@+id/groupProgress"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		app:constraint_referenced_ids="progress,progressText" />
+
+	<ProgressBar
+		android:id="@+id/progress"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:indeterminateTint="@color/colorPrimary"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="UnusedAttribute" />
+
+	<TextView
+		android:id="@+id/progressText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="16dp"
+		android:text="@string/searching_for_recommendations"
+		android:textColor="@color/colorPrimary"
+		android:textSize="12sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/progress" />
+
+	<TextView
+		android:id="@+id/textError"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/error_requesting_news_feed"
+		android:textColor="@color/error_text_color"
+		android:textSize="14sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/buttonRetry"
+		style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:text="@string/retry"
+		android:textColor="@color/error_text_color"
+		app:backgroundTint="@android:color/transparent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/textError"
+		app:strokeColor="@color/error_text_color"
+		app:strokeWidth="1dp" />
+
+	<by.anegin.vkdiscover.core.view.LockableScrollView
+		android:id="@+id/lockableScrollView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:clipChildren="false"
+		android:clipToPadding="false"
+		android:paddingBottom="64dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<by.anegin.vkdiscover.core.view.SwipeableFeedLayout
+			android:id="@+id/swipeableFeedLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:clipChildren="false"
+			android:clipToPadding="false"
+			app:item_layout="@layout/item_post" />
+
+	</by.anegin.vkdiscover.core.view.LockableScrollView>
+
+	<View
+		android:id="@+id/bottomShadow"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/feed_bottom_shadow_height"
+		android:background="@drawable/bottom_bg"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:id="@+id/buttonSkip"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_skip_36"
+		app:backgroundTint="@color/feed_fab_color"
+		app:fabCustomSize="@dimen/feed_fab_size"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/buttonLike"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toStartOf="parent"
+		app:maxImageSize="@dimen/feed_fab_image_size"
+		app:rippleColor="#ccc"
+		app:useCompatPadding="true" />
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:id="@+id/buttonLike"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_like_36"
+		app:backgroundTint="@color/feed_fab_color"
+		app:fabCustomSize="@dimen/feed_fab_size"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/buttonSkip"
+		app:maxImageSize="@dimen/feed_fab_image_size"
+		app:rippleColor="#ff3347"
+		app:useCompatPadding="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<resources>
+
+	<string name="app_name" translatable="false">VkDiscover</string>
+	<string name="login_bottom_text" translatable="false">VK Mobile Challenge 2018</string>
+
+	<string name="login">Login</string>
+	<string name="login_error">Login error. Please try again later</string>
+
+	<string name="searching_for_recommendations">Searching for recommendations&#8230;</string>
+
+	<string name="badge_like">Like it</string>
+	<string name="badge_skip">Skip</string>
+
+	<string name="post_date_format">%1$s at %2$s</string>
+	<string name="today">today</string>
+	<string name="yesterday">yesterday</string>
+
+	<string name="january_short">jan</string>
+	<string name="february_short">feb</string>
+	<string name="march_short">mar</string>
+	<string name="april_short">apr</string>
+	<string name="may_short">may</string>
+	<string name="june_short">jun</string>
+	<string name="july_short">jul</string>
+	<string name="august_short">aug</string>
+	<string name="september_short">sep</string>
+	<string name="october_short">oct</string>
+	<string name="november_short">nov</string>
+	<string name="december_short">dec</string>
+
+	<string name="error_requesting_news_feed">Error requesting news feed</string>
+	<string name="request_failed">Request failed</string>
+	<string name="retry">Retry</string>
+
+	<string name="press_to_watch_video">Press to watch video</string>
+	<string name="press_to_play_audio">Press to play audio</string>
+	<string name="press_to_open_link">Press to open link</string>
+
+	<string name="more">MORE</string>
+	<string name="collapse">COLLAPSE</string>
+
+</resources>

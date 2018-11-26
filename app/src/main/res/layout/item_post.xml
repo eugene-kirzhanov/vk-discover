@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/bg_card_elevation16">
+
+	<ImageView
+		android:id="@+id/imageAvatar"
+		android:layout_width="@dimen/avatar_size"
+		android:layout_height="@dimen/avatar_size"
+		android:layout_marginStart="@dimen/post_card_padding"
+		android:layout_marginTop="@dimen/post_card_padding"
+		android:layout_marginBottom="@dimen/post_card_padding"
+		android:contentDescription="@null"
+		app:layout_constraintBottom_toTopOf="@id/barrierHeader"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:background="@drawable/no_avatar" />
+
+	<TextView
+		android:id="@+id/textName"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:ellipsize="end"
+		android:gravity="start"
+		android:maxLines="1"
+		android:paddingStart="@dimen/post_card_padding"
+		android:paddingEnd="@dimen/post_card_padding"
+		android:textColor="@color/post_sender_name_text"
+		android:textSize="@dimen/post_sender_name_text_size"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@id/textTime"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/imageAvatar"
+		app:layout_constraintTop_toTopOf="@id/imageAvatar"
+		app:layout_constraintVertical_chainStyle="packed"
+		tools:text="Наталья Танаева" />
+
+	<TextView
+		android:id="@+id/textTime"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:ellipsize="end"
+		android:gravity="start"
+		android:maxLines="1"
+		android:paddingStart="@dimen/post_card_padding"
+		android:paddingEnd="@dimen/post_card_padding"
+		android:textColor="@color/post_time_text"
+		android:textSize="@dimen/post_time_text_size"
+		app:layout_constraintBottom_toBottomOf="@id/imageAvatar"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@id/textName"
+		app:layout_constraintTop_toBottomOf="@id/textName"
+		tools:text="14 окт в 22:46" />
+
+	<androidx.constraintlayout.widget.Barrier
+		android:id="@+id/barrierHeader"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:barrierDirection="bottom"
+		app:constraint_referenced_ids="imageAvatar,textTime" />
+
+	<by.anegin.vkdiscover.core.view.NonSwipeableViewPager
+		android:id="@+id/viewPagerPhotos"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="@color/post_photo_bg"
+		app:layout_constraintDimensionRatio="@string/post_photo_ratio"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/barrierHeader" />
+
+	<by.anegin.vkdiscover.core.view.LinePageIndicator
+		android:id="@+id/indicatorPhotos"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/post_photo_indicator_margin"
+		app:gapWidth="@dimen/post_photo_indicator_gap_width"
+		app:layout_constraintEnd_toEndOf="@id/viewPagerPhotos"
+		app:layout_constraintStart_toStartOf="@id/viewPagerPhotos"
+		app:layout_constraintTop_toTopOf="@id/viewPagerPhotos"
+		app:selectedColor="@color/post_photo_indicator_selected"
+		app:strokeWidth="@dimen/post_photo_indicator_stroke_width"
+		app:unselectedColor="@color/post_photo_indicator_unselected" />
+
+	<View
+		android:id="@+id/buttonPrevPhoto"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="@id/viewPagerPhotos"
+		app:layout_constraintEnd_toStartOf="@id/buttonNextPhoto"
+		app:layout_constraintStart_toStartOf="@id/viewPagerPhotos"
+		app:layout_constraintTop_toTopOf="@id/viewPagerPhotos" />
+
+	<View
+		android:id="@+id/buttonNextPhoto"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="@id/viewPagerPhotos"
+		app:layout_constraintEnd_toEndOf="@id/viewPagerPhotos"
+		app:layout_constraintStart_toEndOf="@id/buttonPrevPhoto"
+		app:layout_constraintTop_toTopOf="@id/viewPagerPhotos" />
+
+	<View
+		android:id="@+id/buttonOpenAttachment"
+		android:layout_width="0dp"
+		android:layout_height="48dp"
+		android:background="@drawable/attachment_bottom_bg"
+		android:foreground="?attr/selectableItemBackground"
+		app:layout_constraintBottom_toBottomOf="@id/viewPagerPhotos"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<ImageView
+		android:id="@+id/imageAttachmentIcon"
+		android:layout_width="48dp"
+		android:layout_height="48dp"
+		android:background="?attr/selectableItemBackgroundBorderless"
+		android:contentDescription="@null"
+		android:scaleType="centerInside"
+		app:layout_constraintBottom_toBottomOf="@id/buttonOpenAttachment"
+		app:layout_constraintStart_toStartOf="@id/buttonOpenAttachment"
+		app:layout_constraintTop_toTopOf="@id/buttonOpenAttachment"
+		tools:src="@drawable/ic_play_video" />
+
+	<TextView
+		android:id="@+id/textAttachmentInfo"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:ellipsize="end"
+		android:maxLines="2"
+		android:textColor="#fff"
+		android:textSize="12sp"
+		app:layout_constraintBottom_toBottomOf="@id/buttonOpenAttachment"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/imageAttachmentIcon"
+		app:layout_constraintTop_toTopOf="@id/buttonOpenAttachment"
+		tools:text="@string/press_to_watch_video" />
+
+	<by.anegin.vkdiscover.core.view.ExpandableTextView
+		android:id="@+id/textPost"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/post_card_padding"
+		app:is_expanded="false"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/viewPagerPhotos"
+		app:max_lines="3"
+		app:more_icon="@drawable/ic_dropdown_16"
+		app:more_icon_padding="8dp"
+		app:more_spacing="8dp"
+		app:more_text="@string/more"
+		app:more_text_collapse="@string/collapse"
+		app:more_text_color="@color/post_text_more"
+		app:more_text_size="@dimen/post_text_more_size"
+		app:text_color="@color/post_text"
+		app:text_size="@dimen/post_text_size"
+		tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+
+	<TextView
+		android:id="@+id/badgeLike"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:background="@drawable/bg_button_like_elevation16"
+		android:paddingStart="@dimen/post_badge_padding_start"
+		android:paddingTop="@dimen/post_badge_padding_top"
+		android:paddingEnd="@dimen/post_badge_padding_end"
+		android:rotation="@integer/post_badge_rotation_like"
+		android:text="@string/badge_like"
+		android:textAllCaps="true"
+		android:textColor="@color/post_badge_text_color"
+		android:textSize="@dimen/post_badge_text_size"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/badgeSkip"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:background="@drawable/bg_button_skip_elevation16"
+		android:paddingStart="@dimen/post_badge_padding_start"
+		android:paddingTop="@dimen/post_badge_padding_top"
+		android:paddingEnd="@dimen/post_badge_padding_end"
+		android:rotation="@integer/post_badge_rotation_skip"
+		android:text="@string/badge_skip"
+		android:textAllCaps="true"
+		android:textColor="@color/post_badge_text_color"
+		android:textSize="@dimen/post_badge_text_size"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

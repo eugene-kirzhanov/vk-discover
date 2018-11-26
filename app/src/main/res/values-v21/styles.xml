@@ -1,0 +1,20 @@
+<resources>
+
+	<!-- LoginActivity -->
+
+	<style name="AppTheme.Login" parent="AppTheme.Login.v16">
+		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+		<item name="android:statusBarColor">@color/login_screen_statusbar</item>
+		<item name="android:navigationBarColor">@color/login_screen_statusbar</item>
+	</style>
+
+	<!-- FeedActivity -->
+
+	<style name="AppTheme.Feed.Base.v21" parent="AppTheme.Feed.Base.v16">
+		<item name="android:windowTranslucentStatus">true</item>
+		<item name="android:windowTranslucentNavigation">true</item>
+	</style>
+
+	<style name="AppTheme.Feed" parent="AppTheme.Feed.Base.v21" />
+
+</resources>

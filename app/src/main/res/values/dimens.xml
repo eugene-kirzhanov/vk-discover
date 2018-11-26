@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<dimen name="avatar_size">36dp</dimen>
+
+	<dimen name="post_sender_name_text_size">13sp</dimen>
+	<dimen name="post_time_text_size">12sp</dimen>
+	<dimen name="post_text_size">14sp</dimen>
+	<dimen name="post_text_more_size">12sp</dimen>
+
+	<dimen name="post_card_padding">10dp</dimen>
+
+	<string name="post_photo_ratio" translatable="false">1:1</string>
+	<dimen name="post_photo_indicator_margin">8dp</dimen>
+	<dimen name="post_photo_indicator_gap_width">2dp</dimen>
+	<dimen name="post_photo_indicator_stroke_width">2dp</dimen>
+
+	<dimen name="post_badge_padding_start">26dp</dimen>
+	<dimen name="post_badge_padding_end">26dp</dimen>
+	<dimen name="post_badge_padding_top">23dp</dimen>
+	<dimen name="post_badge_text_size">15sp</dimen>
+	<integer name="post_badge_rotation_like">-4</integer>
+	<integer name="post_badge_rotation_skip">4</integer>
+
+	<dimen name="feed_bottom_shadow_height">84dp</dimen>
+
+	<dimen name="feed_fab_size">60dp</dimen>
+	<dimen name="feed_fab_image_size">32dp</dimen>
+
+</resources>

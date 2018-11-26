@@ -1,0 +1,16 @@
+<resources>
+
+	<!-- FeedActivity -->
+
+	<style name="AppTheme.Feed.Base.v23" parent="AppThemeBase">
+		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+		<item name="android:statusBarColor">@android:color/transparent</item>
+		<item name="android:navigationBarColor">@android:color/transparent</item>
+	</style>
+
+	<style name="AppTheme.Feed" parent="AppTheme.Feed.Base.v23">
+		<item name="android:windowLightStatusBar">true</item>
+		<item name="android:windowTranslucentNavigation">true</item>
+	</style>
+
+</resources>

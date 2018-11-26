@@ -1,0 +1,39 @@
+<resources>
+
+	<string name="login">Войти</string>
+	<string name="login_error">Ошибка авторизации. Попробуйте повторить позже</string>
+
+	<string name="searching_for_recommendations">Поиск рекомендаций&#8230;</string>
+
+	<string name="badge_like">Мне нравится</string>
+	<string name="badge_skip">Пропустить</string>
+
+	<string name="post_date_format">%1$s в %2$s</string>
+	<string name="today">сегодня</string>
+	<string name="yesterday">вчера</string>
+
+	<string name="january_short">янв</string>
+	<string name="february_short">фев</string>
+	<string name="march_short">мар</string>
+	<string name="april_short">апр</string>
+	<string name="may_short">мая</string>
+	<string name="june_short">июн</string>
+	<string name="july_short">июл</string>
+	<string name="august_short">авг</string>
+	<string name="september_short">сен</string>
+	<string name="october_short">окт</string>
+	<string name="november_short">ноя</string>
+	<string name="december_short">дек</string>
+
+	<string name="error_requesting_news_feed">Не удалось получить список новостей</string>
+	<string name="request_failed">Не удалось выполнить запрос</string>
+	<string name="retry">Повторить</string>
+
+	<string name="press_to_watch_video">Нажмите для просмотра видео</string>
+	<string name="press_to_play_audio">Нажмите для прослушивания</string>
+	<string name="press_to_open_link">Нажмите для перехода по ссылке</string>
+
+	<string name="more">ЕЩЕ</string>
+	<string name="collapse">СВЕРНУТЬ</string>
+
+</resources>

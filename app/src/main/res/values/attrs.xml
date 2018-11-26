@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<declare-styleable name="SwipeableFeedLayout">
+		<attr name="item_layout" format="reference" />
+	</declare-styleable>
+
+	<declare-styleable name="LinePageIndicator">
+		<attr name="unselectedColor" format="color" />
+		<attr name="selectedColor" format="color" />
+		<attr name="strokeWidth" />
+		<attr name="gapWidth" format="dimension" />
+	</declare-styleable>
+
+	<declare-styleable name="ExpandableTextView">
+		<attr name="is_expanded" format="boolean" />
+		<attr name="text_size" format="dimension" />
+		<attr name="text_color" format="color" />
+		<attr name="text" format="string" />
+		<attr name="max_lines" format="integer" />
+
+		<attr name="more_text" format="string" />
+		<attr name="more_text_collapse" format="string" />
+		<attr name="more_text_size" format="dimension" />
+		<attr name="more_text_color" format="color" />
+		<attr name="more_icon" format="reference" />
+		<attr name="more_icon_padding" format="dimension" />
+		<attr name="more_spacing" format="dimension" />
+	</declare-styleable>
+
+</resources>

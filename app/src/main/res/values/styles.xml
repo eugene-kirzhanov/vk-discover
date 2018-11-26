@@ -1,0 +1,26 @@
+<resources>
+
+	<style name="AppThemeBase" parent="Theme.MaterialComponents.Light.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:windowBackground">@drawable/app_bg</item>
+	</style>
+
+	<!-- LoginActivity -->
+
+	<style name="AppTheme.Login.v16" parent="AppThemeBase">
+		<item name="android:windowBackground">@color/login_screen_bg</item>
+	</style>
+
+	<style name="AppTheme.Login" parent="AppTheme.Login.v16" />
+
+	<!-- FeedActivity -->
+
+	<style name="AppTheme.Feed.Base.v16" parent="AppThemeBase"/>
+
+	<style name="AppTheme.Feed.Base.v21" parent="AppTheme.Feed.Base.v16"/>
+
+	<style name="AppTheme.Feed" parent="AppTheme.Feed.Base.v21" />
+
+</resources>
